@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Store</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <style>
+        body {
+            padding-bottom: 25px;
+            background-color: lavender;
+        }
+
+        .navbar {
+            background-color: rgb(133, 180, 133);
+        }
+
+        .collapsing {
+            transition: none;
+        }
+
+        .card-img-top {
+            height: 400px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            object-fit: contain;
+            background-color: gray;
+        }
+
+        .card-body {
+            position: relative;
+            background-color: beige;
+        }
+
+        .card-footer {
+            background-color: beige;
+        }
+
+        .cart-btn {
+            margin-left: 5px;
+        }
+
+        .cart-img {
+            filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(21deg) brightness(103%) contrast(101%);
+        }
+
+        .more-less-btn {
+            position: absolute;
+            right: 2px;
+            bottom: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="bestsellers.html">Best Sellers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fiction.html">Fiction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nonfiction.html">Non Fiction</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search Books" aria-label="Search">
+                    <button class="btn btn-primary cart-btn" type="button" id="liveAlertBtn">
+                        <img src="assets/cart-shopping-solid.svg" alt="Logo" width="20" height="20"
+                            class="cart-img"></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Book list -->
+    <main class="container">
+        <div id="liveAlert"></div>
+
+        <h1>All Books</h1>
+
+        <div class="row gy-5 row-cols-1 row-cols-md-2 row-cols-lg-3">
+            <!-- In Search of Lost Time by Marcel Proust -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/In Search of Lost Time.jpg" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">In Search of Lost Time</h5>
+                        <p class="card-text">
+                        <div class="collapse multi-collapse-book1 show" id="multiCollapseExample1">
+                            Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part
+                            cycle, was published in 1913.
+                            In it, Proust introduces the th...
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book1" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show more
+                            </button>
+                        </div>
+                        <div class="collapse multi-collapse-book1" id="multiCollapseExample2">
+                            Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part
+                            cycle, was published in 1913.
+                            In it, Proust introduces the themes that run through the entire work. The narrator recalls
+                            his childhood, aided by the
+                            famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable.
+                            Edmund Wilson said "[Proust]
+                            has supplied for the first time in literature an equivalent in the full scale for the new
+                            theory of modern physics."
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book1" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show less
+                            </button>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <b>Tags:</b>
+                        Classic Literature,
+                        Philosophy
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn" data-book-id="1">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Ulysses by James Joyce -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/Ulysses.jpg" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">Ulysses</h5>
+                        <p class="card-text">
+                        <div class="collapse multi-collapse-book2 show" id="multiCollapseExample1">
+                            Ulysses chronicles the passage of Leopold Bloom through Dublin during an ordinary day, June
+                            16, 1904. The title
+                            parallels and alludes to Odysseus (Lat...
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book2" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show more
+                            </button>
+                        </div>
+                        <div class="collapse multi-collapse-book2" id="multiCollapseExample2">
+                            Ulysses chronicles the passage of Leopold Bloom through Dublin during an ordinary day, June
+                            16, 1904. The title
+                            parallels and alludes to Odysseus (Latinised into Ulysses), the hero of Homer's Odyssey
+                            (e.g., the correspondences
+                            between Leopold Bloom and Odysseus, Molly Bloom and Penelope, and Stephen Dedalus and
+                            Telemachus). Joyce fans worldwide
+                            now celebrate June 16 as Bloomsday.
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book2" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show less
+                            </button>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="card-footer ">
+                        <b>Tags:</b>
+                        Classic Literature,
+                        Irish Literature
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn" data-book-id="2">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Don Quixote by Miguel de Cervantes -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/Don Quixote.jpg" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">Don Quixote</h5>
+                        <p class="card-text">
+                        <div class="collapse multi-collapse-book3 show" id="multiCollapseExample1">
+                            Alonso Quixano, a retired country gentleman in his fifties, lives in an unnamed section of
+                            La Mancha with his niece and
+                            a housekeeper. He has become o...
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book3" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show more
+                            </button>
+                        </div>
+                        <div class="collapse multi-collapse-book3" id="multiCollapseExample2">
+                            Alonso Quixano, a retired country gentleman in his fifties, lives in an unnamed section of
+                            La Mancha with his niece and
+                            a housekeeper. He has become obsessed with books of chivalry, and believes their every word
+                            to be true, despite the fact
+                            that many of the events in them are clearly impossible. Quixano eventually appears to other
+                            people to have lost his mind
+                            from little sleep and food and because of so much reading.
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book3" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show less
+                            </button>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="card-footer ">
+                        <b>Tags:</b>
+                        Adventure,
+                        Classic Literature,
+                        Historical Fiction
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn" data-book-id="3">Add to Cart</button>
+                </div>
+            </div>
+            <!-- One Hundred Years of Solitude by Gabriel Garcia Marquez -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/One Hundred Years of Solitude.jpg" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">One Hundred Years of Solitude</h5>
+                        <p class="card-text">
+                        <div class="collapse multi-collapse-book4 show" id="multiCollapseExample1">
+                            One of the 20th century's enduring works, One Hundred Years of Solitude is a widely beloved
+                            and acclaimed novel known
+                            throughout the world, and the ul...
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book4" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show more
+                            </button>
+                        </div>
+                        <div class="collapse multi-collapse-book4" id="multiCollapseExample2">
+                            One of the 20th century's enduring works, One Hundred Years of Solitude is a widely beloved
+                            and acclaimed novel known
+                            throughout the world, and the ultimate achievement in a Nobel Prize–winning career. The
+                            novel tells the story of the
+                            rise and fall of the mythical town of Macondo through the history of the Buendía family. It
+                            is a rich and brilliant
+                            chronicle of life and death, and the tragicomedy of humankind. In the noble, ridiculous,
+                            beautiful, and tawdry story of
+                            the Buendía family, one sees all of humanity, just as in the history, myths, growth, and
+                            decay of Macondo, one sees all
+                            of Latin America. Love and lust, war and revolution, riches and poverty, youth and senility
+                            — the variety of life, the
+                            endlessness of death, the search for peace and truth — these universal themes dominate the
+                            novel. Whether he is
+                            describing an affair of passion or the voracity of capitalism and the corruption of
+                            government, Gabriel García Márquez
+                            always writes with the simplicity, ease, andpurity that are the mark of a master.
+                            Alternately reverential and comical,
+                            One Hundred Years of Solitude weaves the political, personal, and spiritual to bring a new
+                            consciousness to
+                            storytelling. Translated into dozens of languages, this stunning work is no less than an
+                            accounting of the history of
+                            the human race.
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book4" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show less
+                            </button>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="card-footer ">
+                        <b>Tags:</b>
+                        Classic Literature,
+                        Fantasy,
+                        Latin American
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn" data-book-id="4">Add to Cart</button>
+                </div>
+            </div>
+            <!-- The Great Gatsby by F. Scott Fitzgerald -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/The Great Gatsby.jpg" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">The Great Gatsby</h5>
+                        <p class="card-text">
+                        <div class="collapse multi-collapse-book5 show" id="multiCollapseExample1">
+                            The novel chronicles an era that Fitzgerald himself dubbed the "Jazz Age". Following the
+                            shock and chaos of World War I,
+                            American society enjoyed unpr...
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book5" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show more
+                            </button>
+                        </div>
+                        <div class="collapse multi-collapse-book5" id="multiCollapseExample2">
+                            The novel chronicles an era that Fitzgerald himself dubbed the "Jazz Age". Following the
+                            shock and chaos of World War I,
+                            American society enjoyed unprecedented levels of prosperity during the "roaring" 1920s as
+                            the economy soared. At the
+                            same time, Prohibition, the ban on the sale and manufacture of alcohol as mandated by the
+                            Eighteenth Amendment, made
+                            millionaires out of bootleggers and led to an increase in organized crime, for example the
+                            Jewish mafia. Although
+                            Fitzgerald, like Nick Carraway in his novel, idolized the riches and glamor of the age, he
+                            was uncomfortable with the
+                            unrestrained materialism and the lack of morality that went with it, a kind of decadence.
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book5" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show less
+                            </button>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="card-footer ">
+                        <b>Tags:</b>
+                        American,
+                        Classic Literature,
+                        Romance
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn" data-book-id="5">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Moby Dick by Herman Melville -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/Moby Dick.jpg" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">Moby Dick</h5>
+                        <p class="card-text">
+                        <div class="collapse multi-collapse-book6 show" id="multiCollapseExample1">
+                            First published in 1851, Melville's masterpiece is, in Elizabeth Hardwick's words, "the
+                            greatest novel in American
+                            literature." The saga of Captain Ah...
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book6" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show more
+                            </button>
+                        </div>
+                        <div class="collapse multi-collapse-book6" id="multiCollapseExample2">
+                            First published in 1851, Melville's masterpiece is, in Elizabeth Hardwick's words, "the
+                            greatest novel in American
+                            literature." The saga of Captain Ahab and his monomaniacal pursuit of the white whale
+                            remains a peerless adventure story
+                            but one full of mythic grandeur, poetic majesty, and symbolic power. Filtered through the
+                            consciousness of the novel's
+                            narrator, Ishmael, Moby-Dick draws us into a universe full of fascinating characters and
+                            stories, from the noble
+                            cannibal Queequeg to the natural history of whales, while reaching existential depths that
+                            excite debate and
+                            contemplation to this day.
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book6" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show less
+                            </button>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="card-footer ">
+                        <b>Tags:</b>
+                        19th Century,
+                        American,
+                        Classic Literature
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn" data-book-id="6">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Essays by Michel de Montaigne -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/Essays.jpg" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">Essays</h5>
+                        <p class="card-text">
+                        <div class="collapse multi-collapse-book7 show" id="multiCollapseExample1">
+                            Essays is the title given to a collection of 107 essays written by Michel de Montaigne that
+                            was first published in 1580.
+                            Montaigne essentially invente...
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book7" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show more
+                            </button>
+                        </div>
+                        <div class="collapse multi-collapse-book7" id="multiCollapseExample2">
+                            Essays is the title given to a collection of 107 essays written by Michel de Montaigne that
+                            was first published in 1580.
+                            Montaigne essentially invented the literary form of essay, a short subjective treatment of a
+                            given topic, of which the
+                            book contains a large number. Essai is French for "trial" or "attempt".
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book7" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show less
+                            </button>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="card-footer ">
+                        <b>Tags:</b>
+                        16th Century,
+                        French Literature,
+                        Philosophy
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn" data-book-id="7">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Walden by Henry David Thoreau -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/Walden.jpg" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">Walden</h5>
+                        <p class="card-text">
+                        <div class="collapse multi-collapse-book8 show" id="multiCollapseExample1">
+                            Walden (first published as Walden; or, Life in the Woods) is an American book written by
+                            noted transcendentalist Henry
+                            David Thoreau, a reflection upo...
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book8" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show more
+                            </button>
+                        </div>
+                        <div class="collapse multi-collapse-book8" id="multiCollapseExample2">
+                            Walden (first published as Walden; or, Life in the Woods) is an American book written by
+                            noted transcendentalist Henry
+                            David Thoreau, a reflection upon simple living in natural surroundings.
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book8" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show less
+                            </button>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="card-footer ">
+                        <b>Tags:</b>
+                        Biography,
+                        Nature,
+                        Philosophy
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn" data-book-id="8">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Confessions by Augustine -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/Confessions.jpg" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">Confessions</h5>
+                        <p class="card-text">
+                        <div class="collapse multi-collapse-book9 show" id="multiCollapseExample1">
+                            Confessions is the name of an autobiographical work, consisting of 13 books, by St.
+                            Augustine of Hippo, written between
+                            AD 397 and AD 398. Modern Engl...
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book9" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show more
+                            </button>
+                        </div>
+                        <div class="collapse multi-collapse-book9" id="multiCollapseExample2">
+                            Confessions is the name of an autobiographical work, consisting of 13 books, by St.
+                            Augustine of Hippo, written between
+                            AD 397 and AD 398. Modern English translations of it are sometimes published under the title
+                            The Confessions of St.
+                            Augustine in order to distinguish the book from other books with similar titles, such as
+                            Jean-Jacques Rousseau's
+                            Confessions.
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book9" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show less
+                            </button>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="card-footer ">
+                        <b>Tags:</b>
+                        Biography,
+                        Philosophy,
+                        Religion,
+                        Theology
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn" data-book-id="9">Add to Cart</button>
+                </div>
+            </div>
+            <!-- The Interpretation of Dreams by Sigmund Freud -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/The Interpretation of Dreams.jpg" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">The Interpretation of Dreams</h5>
+                        <p class="card-text">
+                        <div class="collapse multi-collapse-book10 show" id="multiCollapseExample1">
+                            This book introduces Freud's theory of the unconscious with respect to dream interpretation.
+                            Dreams, in Freud's view,
+                            were all forms of "wish-fulfillm...
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book10" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show more
+                            </button>
+                        </div>
+                        <div class="collapse multi-collapse-book10" id="multiCollapseExample2">
+                            This book introduces Freud's theory of the unconscious with respect to dream interpretation.
+                            Dreams, in Freud's view,
+                            were all forms of "wish-fulfillment" — attempts by the unconscious to resolve a conflict of
+                            some sort, whether something
+                            recent or something from the recesses of the past (later in Beyond the Pleasure Principle,
+                            Freud would discuss dreams
+                            which did not appear to be wish-fulfillment). However, because the information in the
+                            unconscious is in an unruly and
+                            often disturbing form, a "censor" in the preconscious will not allow it to pass unaltered
+                            into the conscious. During
+                            dreams, the preconscious is more lax in this duty than in waking hours, but is still
+                            attentive: as such, the unconscious
+                            must distort and warp the meaning of its information to make it through the censorship. As
+                            such, images in dreams are
+                            often not what they appear to be, according to Freud, and need deeper interpretation if they
+                            are to inform on the
+                            structures of the unconscious.
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book10" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show less
+                            </button>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="card-footer ">
+                        <b>Tags:</b>
+                        Philosophy,
+                        Psychology,
+                        Science
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn" data-book-id="10">Add to Cart</button>
+                </div>
+            </div>
+            <!-- The Prince by Niccolo Machiavelli -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/The Prince.jpg" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">The Prince</h5>
+                        <p class="card-text">
+                        <div class="collapse multi-collapse-book11 show" id="multiCollapseExample1">
+                            Il Principe (The Prince) is a political treatise by the Florentine public servant and
+                            political theorist Niccolò
+                            Machiavelli. Originally called De Pri...
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book11" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show more
+                            </button>
+                        </div>
+                        <div class="collapse multi-collapse-book11" id="multiCollapseExample2">
+                            Il Principe (The Prince) is a political treatise by the Florentine public servant and
+                            political theorist Niccolò
+                            Machiavelli. Originally called De Principatibus (About Principalities), it was originally
+                            written in 1513, but not
+                            published until 1532, five years after Machiavelli's death. The treatise is not
+                            representative of the work published
+                            during his lifetime, but it is the most remembered, and the work responsible for bringing
+                            "Machiavellian" into wide
+                            usage as a pejorative term.
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book11" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show less
+                            </button>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="card-footer ">
+                        <b>Tags:</b>
+                        History,
+                        Philosophy,
+                        Politics
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn" data-book-id="11">Add to Cart</button>
+                </div>
+            </div>
+            <!-- The Diary of a Young Girl by Anne Frank -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/The Diary of a Young Girl.jpg" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">The Diary of a Young Girl</h5>
+                        <p class="card-text">
+                        <div class="collapse multi-collapse-book12 show" id="multiCollapseExample1">
+                            The Diary of a Young Girl is a book based on the writings from a diary written by Anne Frank
+                            while she was in hiding for
+                            two years with her family dur...
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book12" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show more
+                            </button>
+                        </div>
+                        <div class="collapse multi-collapse-book12" id="multiCollapseExample2">
+                            The Diary of a Young Girl is a book based on the writings from a diary written by Anne Frank
+                            while she was in hiding for
+                            two years with her family during the Nazi occupation of the Netherlands. The family was
+                            apprehended in 1944 and Anne
+                            Frank ultimately died of typhus in the Bergen-Belsen concentration camp. After the war, the
+                            diary was retrieved by
+                            Anne's father, Otto Frank.
+                            <button class="btn btn-outline-dark btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book12" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show less
+                            </button>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="card-footer ">
+                        <b>Tags:</b>
+                        Autobiography,
+                        History,
+                        World War II
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn" data-book-id="12">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        const alertPlaceholder = document.getElementById('liveAlert')
+
+        const alert = (message, type) => {
+            const wrapper = document.createElement('div')
+            wrapper.innerHTML = [
+                `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                `   <div>${message}</div>`,
+                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+            ].join('')
+
+            alertPlaceholder.append(wrapper)
+        }
+
+        const alertTrigger = document.getElementById('liveAlertBtn')
+        if (alertTrigger) {
+            alertTrigger.addEventListener('click', () => {
+                alert("Sorry, this feature isn't available right now. Please support us by donating to our PayPal account. :)", 'success')
+            })
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Store</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <style>
+        body {
+            padding-bottom: 25px;
+            background-color: lavender;
+        }
+
+        .navbar {
+            background-color: rgb(133, 180, 133);
+        }
+
+        .collapsing {
+            transition: none;
+        }
+
+        .card-img-top {
+            height: 400px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            object-fit: contain;
+            background-color: gray;
+        }
+
+        .card-body {
+            position: relative;
+            background-color: beige;
+        }
+
+        .card-footer {
+            background-color: beige;
+        }
+
+        .cart-btn {
+            margin-left: 5px;
+        }
+
+        .cart-img {
+            filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(21deg) brightness(103%) contrast(101%);
+        }
+
+        .more-less-btn {
+            position: absolute;
+            right: 2px;
+            bottom: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="bestsellers.html">Best Sellers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fiction.html">Fiction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nonfiction.html">Non Fiction</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search Books" aria-label="Search">
+                    <button class="btn btn-primary cart-btn" type="button" id="liveAlertBtn">
+                        <img src="assets/cart-shopping-solid.svg" alt="Logo" width="20" height="20"
+                            class="cart-img"></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Book list -->
+    <main class="container">
+        <div id="liveAlert"></div>
+
+        <h1>Non Fiction</h1>
+
+        <div class="row gy-5 row-cols-1 row-cols-md-2 row-cols-lg-3">
+            <!-- Essays by Michel de Montaigne -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/Essays.jpg" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">Essays</h5>
+                        <p class="card-text">
+                        <div class="collapse multi-collapse-book7 show" id="multiCollapseExample1">
+                            Essays is the title given to a collection of 107 essays written by Michel de Montaigne that
+                            was first published in 1580.
+                            Montaigne essentially invente...
+                            <button class="btn btn-outline-secondary btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book7" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show more
+                            </button>
+                        </div>
+                        <div class="collapse multi-collapse-book7" id="multiCollapseExample2">
+                            Essays is the title given to a collection of 107 essays written by Michel de Montaigne that
+                            was first published in 1580.
+                            Montaigne essentially invented the literary form of essay, a short subjective treatment of a
+                            given topic, of which the
+                            book contains a large number. Essai is French for "trial" or "attempt".
+                            <button class="btn btn-outline-secondary btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book7" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show less
+                            </button>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <b>Tags:</b>
+                        16th Century,
+                        French Literature,
+                        Philosophy
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn" data-book-id="7">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Walden by Henry David Thoreau -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/Walden.jpg" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">Walden</h5>
+                        <p class="card-text">
+                        <div class="collapse multi-collapse-book8 show" id="multiCollapseExample1">
+                            Walden (first published as Walden; or, Life in the Woods) is an American book written by
+                            noted transcendentalist Henry
+                            David Thoreau, a reflection upo...
+                            <button class="btn btn-outline-secondary btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book8" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show more
+                            </button>
+                        </div>
+                        <div class="collapse multi-collapse-book8" id="multiCollapseExample2">
+                            Walden (first published as Walden; or, Life in the Woods) is an American book written by
+                            noted transcendentalist Henry
+                            David Thoreau, a reflection upon simple living in natural surroundings.
+                            <button class="btn btn-outline-secondary btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book8" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show less
+                            </button>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <b>Tags:</b>
+                        Biography,
+                        Nature,
+                        Philosophy
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn" data-book-id="8">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Confessions by Augustine -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/Confessions.jpg" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">Confessions</h5>
+                        <p class="card-text">
+                        <div class="collapse multi-collapse-book9 show" id="multiCollapseExample1">
+                            Confessions is the name of an autobiographical work, consisting of 13 books, by St.
+                            Augustine of Hippo, written between
+                            AD 397 and AD 398. Modern Engl...
+                            <button class="btn btn-outline-secondary btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book9" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show more
+                            </button>
+                        </div>
+                        <div class="collapse multi-collapse-book9" id="multiCollapseExample2">
+                            Confessions is the name of an autobiographical work, consisting of 13 books, by St.
+                            Augustine of Hippo, written between
+                            AD 397 and AD 398. Modern English translations of it are sometimes published under the title
+                            The Confessions of St.
+                            Augustine in order to distinguish the book from other books with similar titles, such as
+                            Jean-Jacques Rousseau's
+                            Confessions.
+                            <button class="btn btn-outline-secondary btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book9" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show less
+                            </button>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <b>Tags:</b>
+                        Biography,
+                        Philosophy,
+                        Religion,
+                        Theology
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn" data-book-id="9">Add to Cart</button>
+                </div>
+            </div>
+            <!-- The Interpretation of Dreams by Sigmund Freud -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/The Interpretation of Dreams.jpg" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">The Interpretation of Dreams</h5>
+                        <p class="card-text">
+                        <div class="collapse multi-collapse-book10 show" id="multiCollapseExample1">
+                            This book introduces Freud's theory of the unconscious with respect to dream interpretation.
+                            Dreams, in Freud's view,
+                            were all forms of "wish-fulfillm...
+                            <button class="btn btn-outline-secondary btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book10" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show more
+                            </button>
+                        </div>
+                        <div class="collapse multi-collapse-book10" id="multiCollapseExample2">
+                            This book introduces Freud's theory of the unconscious with respect to dream interpretation.
+                            Dreams, in Freud's view,
+                            were all forms of "wish-fulfillment" — attempts by the unconscious to resolve a conflict of
+                            some sort, whether something
+                            recent or something from the recesses of the past (later in Beyond the Pleasure Principle,
+                            Freud would discuss dreams
+                            which did not appear to be wish-fulfillment). However, because the information in the
+                            unconscious is in an unruly and
+                            often disturbing form, a "censor" in the preconscious will not allow it to pass unaltered
+                            into the conscious. During
+                            dreams, the preconscious is more lax in this duty than in waking hours, but is still
+                            attentive: as such, the unconscious
+                            must distort and warp the meaning of its information to make it through the censorship. As
+                            such, images in dreams are
+                            often not what they appear to be, according to Freud, and need deeper interpretation if they
+                            are to inform on the
+                            structures of the unconscious.
+                            <button class="btn btn-outline-secondary btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book10" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show less
+                            </button>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <b>Tags:</b>
+                        Philosophy,
+                        Psychology,
+                        Science
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn" data-book-id="10">Add to Cart</button>
+                </div>
+            </div>
+            <!-- The Prince by Niccolo Machiavelli -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/The Prince.jpg" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">The Prince</h5>
+                        <p class="card-text">
+                        <div class="collapse multi-collapse-book11 show" id="multiCollapseExample1">
+                            Il Principe (The Prince) is a political treatise by the Florentine public servant and
+                            political theorist Niccolò
+                            Machiavelli. Originally called De Pri...
+                            <button class="btn btn-outline-secondary btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book11" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show more
+                            </button>
+                        </div>
+                        <div class="collapse multi-collapse-book11" id="multiCollapseExample2">
+                            Il Principe (The Prince) is a political treatise by the Florentine public servant and
+                            political theorist Niccolò
+                            Machiavelli. Originally called De Principatibus (About Principalities), it was originally
+                            written in 1513, but not
+                            published until 1532, five years after Machiavelli's death. The treatise is not
+                            representative of the work published
+                            during his lifetime, but it is the most remembered, and the work responsible for bringing
+                            "Machiavellian" into wide
+                            usage as a pejorative term.
+                            <button class="btn btn-outline-secondary btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book11" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show less
+                            </button>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <b>Tags:</b>
+                        History,
+                        Philosophy,
+                        Politics
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn" data-book-id="11">Add to Cart</button>
+                </div>
+            </div>
+            <!-- The Diary of a Young Girl by Anne Frank -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/The Diary of a Young Girl.jpg" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">The Diary of a Young Girl</h5>
+                        <p class="card-text">
+                        <div class="collapse multi-collapse-book12 show" id="multiCollapseExample1">
+                            The Diary of a Young Girl is a book based on the writings from a diary written by Anne Frank
+                            while she was in hiding for
+                            two years with her family dur...
+                            <button class="btn btn-outline-secondary btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book12" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show more
+                            </button>
+                        </div>
+                        <div class="collapse multi-collapse-book12" id="multiCollapseExample2">
+                            The Diary of a Young Girl is a book based on the writings from a diary written by Anne Frank
+                            while she was in hiding for
+                            two years with her family during the Nazi occupation of the Netherlands. The family was
+                            apprehended in 1944 and Anne
+                            Frank ultimately died of typhus in the Bergen-Belsen concentration camp. After the war, the
+                            diary was retrieved by
+                            Anne's father, Otto Frank.
+                            <button class="btn btn-outline-secondary btn-sm more-less-btn" type="button"
+                                data-bs-toggle="collapse" data-bs-target=".multi-collapse-book12" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                Show less
+                            </button>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <b>Tags:</b>
+                        Autobiography,
+                        History,
+                        World War II
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn" data-book-id="12">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        const alertPlaceholder = document.getElementById('liveAlert')
+
+        const alert = (message, type) => {
+            const wrapper = document.createElement('div')
+            wrapper.innerHTML = [
+                `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                `   <div>${message}</div>`,
+                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+            ].join('')
+
+            alertPlaceholder.append(wrapper)
+        }
+
+        const alertTrigger = document.getElementById('liveAlertBtn')
+        if (alertTrigger) {
+            alertTrigger.addEventListener('click', () => {
+                alert("Sorry, this feature isn't available right now. Please support us by donating to our PayPal account. :)", 'success')
+            })
+        }
+    </script>
+</body>
+
+</html>
